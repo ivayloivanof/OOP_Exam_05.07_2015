@@ -1,6 +1,6 @@
 ﻿namespace WinterIsComing.Models.Units
 {
-    using Spells;
+    using CombatHandlers;
 
     class IceGiant : Unit
     {
@@ -13,7 +13,7 @@
         public IceGiant(string name, int x, int y) 
             : base(x, y, name, iceGiantAttackPoints, iceGiantHealthPoints, iceGiantDefence, iceGiantEnergy, iceGiantRange, UnitType.IceGiant)
         {
-            base.Spells.Add(new Stomp(iceGiantAttackPoints));
+            this.CombatHandler = new IceGiantCombatHandler(this);
         }
         
         public override string ToString()

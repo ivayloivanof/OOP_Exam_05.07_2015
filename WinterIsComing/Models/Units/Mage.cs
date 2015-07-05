@@ -1,6 +1,6 @@
 ﻿namespace WinterIsComing.Models.Units
 {
-    using Spells;
+    using CombatHandlers;
 
     class Mage : Unit
     {
@@ -13,8 +13,7 @@
         public Mage(string name, int x, int y)
             : base(x, y, name, mageAttackPoints, mageHealthPoints, mageDefence, mageEnergy, mageRange, UnitType.Mage)
         {
-            base.Spells.Add(new FireBreath(mageAttackPoints));
-            base.Spells.Add(new Blizzard(mageAttackPoints*2));
+            this.CombatHandler = new MageCombatHandler(this);
         }
 
         public override string ToString()
