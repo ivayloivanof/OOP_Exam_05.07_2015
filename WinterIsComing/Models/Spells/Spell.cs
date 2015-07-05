@@ -4,7 +4,7 @@
 
     class Spell : ISpell
     {
-        public Spell(int damage, int energyCost)
+        protected Spell(int damage, int energyCost)
         {
             this.Damage = damage;
             this.EnergyCost = energyCost;
