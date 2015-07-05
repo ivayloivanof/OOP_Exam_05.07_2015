@@ -1,9 +1,6 @@
-﻿using WinterIsComing.Models.CombatHandlers;
-
-namespace WinterIsComing.Models.Units
+﻿namespace WinterIsComing.Models.Units
 {
     using System;
-    using System.Collections.Generic;
     using System.Text;
 
     using Contracts;
@@ -20,27 +17,22 @@ namespace WinterIsComing.Models.Units
             this.DefensePoints = defence;
             this.EnergyPoints = energy;
             this.Range = range;
-            this.Type = type;
-            this.Spells = new List<ISpell>();
-            this.CombatHandler = new CombatHandler {Unit = this};
         }
 
         public int X { get; set; }
         public int Y { get; set; }
         public string Name { get; private set; }
-        public int Range { get; private set; }
         public int AttackPoints { get; set; }
         public int HealthPoints { get; set; }
         public int DefensePoints { get; set; }
         public int EnergyPoints { get; set; }
-        public UnitType Type { get; set;  }
-        public IList<ISpell> Spells { get; set; }
-        public ICombatHandler CombatHandler { get; private set; }
+        public int Range { get; private set; }
+        public ICombatHandler CombatHandler { get; protected set; }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(String.Format(">{0} - {1} at ({2},{3})", this.Name, this.Type, this.X, this.Y));
+            sb.AppendLine(String.Format(">{0} - {1} at ({2},{3})", this.Name, this.GetType().Name, this.X, this.Y));
 
             if (this.HealthPoints <= 0)
             {
