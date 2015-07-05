@@ -70,13 +70,15 @@
     <Compile Include="Core\EmptyUnitEffector.cs" />
     <Compile Include="Core\UnitFactory.cs" />
     <Compile Include="Models\CombatHandlers\CombatHandler.cs" />
+    <Compile Include="Models\CombatHandlers\IceGiantCombatHandler.cs" />
+    <Compile Include="Models\CombatHandlers\MageCombatHandler.cs" />
+    <Compile Include="Models\CombatHandlers\WarriorCombatHandler.cs" />
     <Compile Include="Models\NewCommandDispatcher.cs" />
     <Compile Include="Models\Spells\Blizzard.cs" />
     <Compile Include="Models\Spells\Cleave.cs" />
     <Compile Include="Models\Spells\FireBreath.cs" />
     <Compile Include="Models\Spells\Spell.cs" />
     <Compile Include="Models\Spells\Stomp.cs" />
-    <Compile Include="Models\ToggleEffector.cs" />
     <Compile Include="Models\Units\IceGiant.cs" />
     <Compile Include="Models\Units\Mage.cs" />
     <Compile Include="Models\Units\Unit.cs" />
