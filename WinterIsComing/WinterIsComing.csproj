@@ -73,6 +73,7 @@
     <Compile Include="Models\CombatHandlers\IceGiantCombatHandler.cs" />
     <Compile Include="Models\CombatHandlers\MageCombatHandler.cs" />
     <Compile Include="Models\CombatHandlers\WarriorCombatHandler.cs" />
+    <Compile Include="Models\ExtendUnitEffect.cs" />
     <Compile Include="Models\NewCommandDispatcher.cs" />
     <Compile Include="Models\Spells\Blizzard.cs" />
     <Compile Include="Models\Spells\Cleave.cs" />

@@ -20,7 +20,8 @@
             IUnitContainer unitMatrix = new MatrixContainer(MatrixRows, MatrixCols);
             //ICommandDispatcher commandDispatcher = new CommandDispatcher();
             ICommandDispatcher commandDispatcher = new NewCommandDispatcher();
-            IUnitEffector unitEffector = new EmptyUnitEffector();
+            //IUnitEffector unitEffector = new EmptyUnitEffector();
+            IUnitEffector unitEffector = new ExtendUnitEffect();
 
             var engine = new Engine(unitMatrix,
                 consoleReader, 
