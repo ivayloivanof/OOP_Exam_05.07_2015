@@ -1,6 +1,6 @@
 ﻿namespace WinterIsComing.Models.Spells
 {
-    class Blizzard : Spell
+    internal class Blizzard : Spell
     {
         private const int costsBlizzardEnergy = 40;
 
