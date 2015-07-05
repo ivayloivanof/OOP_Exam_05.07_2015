@@ -1,7 +1,6 @@
 ﻿namespace WinterIsComing.Models.Units
 {
-    using Models.Spells;
-
+    using CombatHandlers;
     class Warrior : Unit
     {
         private const int warriorAttackPoints = 120;
@@ -13,7 +12,7 @@
         public Warrior(string name, int x, int y) 
             : base(x, y, name, warriorAttackPoints, warriorHealthPoints, warriorDefence, warriorEnergy, warriorRange, UnitType.Warrior)
         {
-            base.Spells.Add(new Cleave(warriorAttackPoints));
+            this.CombatHandler = new WarriorCombatHandler(this);
         }
 
         public override string ToString()
